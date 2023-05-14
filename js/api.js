@@ -5,7 +5,7 @@ const API = 'https://icanhazdadjoke.com/',
     }
   })
 
-export const fetchJoke = async () => {
+export const fetchRandomJoke = async () => {
   try {
     const Joke = await fetch(API, config)
       .then(response => response.json())

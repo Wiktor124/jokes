@@ -1,8 +1,8 @@
-import  { fetchJoke } from "./api.js";
+import  { fetchRandomJoke } from "./api.js";
 
 // get a random joke by clicking
 const randomJoke = async () => {
-  const { joke } = await fetchJoke()
+  const { joke } = await fetchRandomJoke()
 
   document.querySelector('.random-joke__text').innerHTML = `<span>${joke}</span>`;
 }
