@@ -11,7 +11,7 @@ const searchJokes = async () => {
   const { results } = await fetchJokes(searchThis);
   const jokesContainerList = document.querySelector('.search-jokes__list');
   
-  jokesContainerList.innerHTML += results.length === 0
+  jokesContainerList.innerHTML = results.length === 0
     ? `<li class="joke">No results</li>`
     : results.map(({ joke }) => `<li class="joke">${joke}</li>`).join('');
 }
