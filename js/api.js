@@ -5,6 +5,7 @@ const API = 'https://icanhazdadjoke.com/',
     }
   })
 
+// fetch a random joke
 export const fetchRandomJoke = async () => {
   try {
     const Joke = await fetch(API, config)
@@ -16,6 +17,7 @@ export const fetchRandomJoke = async () => {
   }
 }
 
+// fetch all jokes
 export const fetchJokes = async (kindJoke) => {
   try {
     const jokes = await fetch(`${API}/search?term=${kindJoke}`, config)

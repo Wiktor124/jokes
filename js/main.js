@@ -1,6 +1,7 @@
 import randomJoke from "./random-joke.js";
 import searchJokes from "./search-jokes.js";
 
+// event delegation find two different buttons
 document.querySelector('.container').addEventListener('click', async (e) => {
   const btn = e.target;
   
