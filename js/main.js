@@ -1,16 +1,14 @@
 import randomJoke from "./random-joke.js";
 import searchJokes from "./search-jokes.js";
 
-// event delegation find two different buttons
-document.querySelector('.container').addEventListener('click', async (e) => {
-  const btn = e.target;
-  
-  if(btn.matches('.random-joke__btn')) {
-    await randomJoke()
-    btn.textContent = 'Get another joke!'
-  }
 
-  if(btn.matches('.search-joke__btn')) {
-    await searchJokes()
-  }
+document.querySelector('.random-joke__btn').addEventListener('click', async (e) => {
+  await randomJoke()
+  e.target.innerText = 'Get another joke!';
+})
+
+document.querySelector('#search-joke__form').addEventListener('submit', async (e) => {
+  e.preventDefault()
+  await searchJokes()
+  e.target.reset();
 })
