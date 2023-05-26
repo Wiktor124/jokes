@@ -1,5 +1,6 @@
 import randomJoke from "./random-joke.js";
 import searchJokes from "./search-jokes.js";
+import "./components/random-component.js";
 
 
 document.querySelector('.random-joke__btn').addEventListener('click', async (e) => {
@@ -10,5 +11,19 @@ document.querySelector('.random-joke__btn').addEventListener('click', async (e) 
 document.querySelector('#search-joke__form').addEventListener('submit', async (e) => {
   e.preventDefault()
   await searchJokes()
+  // Get all the desired nodes
+  const allNodes = document.querySelectorAll(".joke");
+  console.log(allNodes);
+
+  // Add a click handler to each node
+  allNodes.forEach(addClickHandler);
+
+  function addClickHandler(node) {
+    node.addEventListener("click", function () {
+      console.log("Hiciste clic en el nodo: " + node.dataset.id);
+    });
+  }
   e.target.reset();
 })
+
+

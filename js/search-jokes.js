@@ -1,24 +1,28 @@
-import { fetchJokes } from "./api.js";
+import { fetchJokes } from "./services/api.js";
+
+// print jokes
+function printJokes(jokesFound) {
+  const jokesContainerList = document.querySelector('.search-jokes__list');
+
+  jokesContainerList.innerHTML = jokesFound.length === 0
+    ? `<li class="joke">No results</li>`
+    : jokesFound.map(({ id, joke }) => `<li class="joke" data-id="${id}">${joke}</li>`).join('');
+}
 
 // search jokes by typing
-let lastSearch;
+let lastSearch = '';
 const searchJokes = async () => {
+
   const searchThis = document.querySelector('#serach-joke__bar').value.trim();
-  
-  if (searchThis === '') {
-    return alert('Required Field')
-  }
-  
-  if(lastSearch === searchThis) {
+
+  if (searchThis === '' || lastSearch === searchThis) {
     return
   }
   lastSearch = searchThis;
 
   const { results } = await fetchJokes(searchThis);
-  const jokesContainerList = document.querySelector('.search-jokes__list');
-  
-  jokesContainerList.innerHTML = results.length === 0
-    ? `<li class="joke">No results</li>`
-    : results.map(({ joke }) => `<li class="joke">${joke}</li>`).join('');
+
+  printJokes(results);
 }
+
 export default searchJokes;

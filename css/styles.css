@@ -41,3 +41,11 @@ ol {
   margin: 10px 0;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+  background-color: #1A1A1B;
+  padding: 10px 5px;
+  display: block;
+  margin: 10px 0;
+}
