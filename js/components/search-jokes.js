@@ -1,4 +1,4 @@
-import { fetchJokes } from "./services/api.js";
+import { fetchJokes } from "../services/api.js";
 
 // print jokes
 function printJokes(jokesFound) {

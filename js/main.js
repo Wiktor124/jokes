@@ -1,6 +1,6 @@
-import randomJoke from "./random-joke.js";
-import searchJokes from "./search-jokes.js";
-import "./components/random-component.js";
+import randomJoke from "./components/random-joke.js";
+import searchJokes from "./components/search-jokes.js";
+import "./components/create-dom-html.js";
 
 
 document.querySelector('.random-joke__btn').addEventListener('click', async (e) => {
