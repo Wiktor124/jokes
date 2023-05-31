@@ -6,36 +6,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jokes</title>
-  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./styles/css/styles.css">
 </head>
 
 <body>
 
-  <main class="container">
-    <img src="./images/dad.jpeg" alt="Dad" class="dad-image">
-
-    <section class="product">
-
-      <div class="product__img">
-
-      </div>
-      
-      <div class="product__info">
-        <div class="product__text"></div>
-        
-        <!-- random joke -->
-        <app-random-form></app-random-form>
-      </div>
-    </section>
+  <main class="home__container">
+    <img src="./images/dad.jpeg" alt="Dad" id="dad-home-image">
+    
+    <!-- random joke -->
+    <app-random-form></app-random-form>
 
     <!-- search jokes -->
     <section class="search-jokes joke__container">
-      <form id="search-joke__form">
-        <input type="text" name="" id="serach-joke__bar">
-        <button type="submit" class="search-joke__btn">Search</button>
+      <form class="search-jokes__form">
+        <input type="text" name="" class="serach-jokes__bar">
+        <button type="submit" class="buttons">Search</button>
       </form>
 
-      <ol class="search-jokes__list"></ol>
+      <ol class="search-jokes__list">
+        <li>There's no jokes!</li>
+      </ol>
     </section>
   </main>
 

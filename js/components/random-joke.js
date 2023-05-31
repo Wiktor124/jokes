@@ -9,12 +9,14 @@ function printRandomJoke(jokeId, joke) {
   } else {
     textContainer.innerHTML = `<span class="joke">${joke}</span>`
   }
-  
+
 }
 
 // get a random joke by clicking
-const randomJoke = async () => {
+const randomJoke = async (returnThis =  false) => {
   const { id, joke } = await fetchRandomJoke()
-   printRandomJoke(id, joke);
+  printRandomJoke(id, joke);
+
+  if(returnThis) return {id, joke}
 }
 export default randomJoke;
