@@ -1,0 +1,55 @@
+#dad-home-image {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+}
+
+.home__container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search-jokes {
+  $padding1: 20px;
+  $padding2: 10px;
+
+  padding: $padding1;
+  background-color: $grey;
+
+  &__form {
+    display: flex;
+    width: 100%;
+  }
+
+  input[type="text"] {
+    border-radius: $border;
+    font-size: $general-font;
+    font-weight: $general-font-weigth;
+    flex-grow: 1;
+    padding: $padding2 $padding1;
+    border: none;
+    margin-right: 10px;
+  }
+
+  &__btn {
+
+    padding: 8px 15px;
+    border: 2.5px solid $black;
+    font-size: $general-font;
+    font-weight: $general-font-weigth;
+    border-radius: $border;
+  }
+
+  &__list li {
+    margin: 20px 0;
+    padding: $padding2 $padding1;
+    background-color: $white;
+    border-radius: $border;
+    text-align: center;
+
+    a {
+      color: $black;
+      font-weight: $general-font-weigth;
+    }
+  }
+}

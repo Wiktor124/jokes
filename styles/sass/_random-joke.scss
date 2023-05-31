@@ -1,0 +1,36 @@
+.buttons {
+  padding: 8px 15px;
+  border: 2.5px solid $black;
+  font-size: $general-font;
+  font-weight: $general-font-weigth;
+  border-radius: $border;
+}
+
+.random-joke {
+  background-color: $grey;
+  padding: 30px 20px 20px;
+  border-radius: $border;
+  margin-bottom: 30px;
+
+  &__text {
+    background-color: $white;
+    height: 150px;
+    border-radius: $border;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 20px;
+
+    a {
+      color: $black;
+      font-weight: $general-font-weigth;
+    }
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+  }
+
+}

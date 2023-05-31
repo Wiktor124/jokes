@@ -1,0 +1,20 @@
+{
+  "name": "jokes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch styles/sass:styles/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wiktor124/jokes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Wiktor124/jokes/issues"
+  },
+  "homepage": "https://github.com/Wiktor124/jokes#readme"
+}
