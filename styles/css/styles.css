@@ -133,6 +133,10 @@ a {
   gap: 20px;
 }
 
+.productBtn {
+  width: 100%;
+}
+
 .buttons {
   padding: 8px 15px;
   border: 2.5px solid #000000;

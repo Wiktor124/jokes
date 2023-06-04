@@ -1,42 +1,24 @@
-
-
 class EventManager {
   constructor(eventName) {
     this.event = eventName;
   }
 
+  /**
+   * This method only accepts functions as parameters.
+   * 
+   * @param {subscribe} function
+   */
   subscribe(subscriber) {
     document.addEventListener(this.event, subscriber);
   }
 
+  /**
+   * This method accepts any data.
+   * 
+   * @param {fireEvent} any 
+   */
   fireEvent(data) {
     document.dispatchEvent(new CustomEvent(this.event, { detail: data }))
   }
 }
-
-/**
- * Subscirbe your functions here to change print joke in products
- * 
- * 
- * @param {ChangeProductJoke} event
- */
-
-export class ChangeProductJoke extends EventManager {
-  constructor(eventName) {
-    super(eventName)
-  }
-}
-
-
-/**
- * Subscribe your functions here to change products or color
- * 
- * 
- * @param {ChangeProduct} event
- */
-
-export class ChangeProduct extends EventManager {
-  constructor(eventName) {
-    super(eventName)
-  }
-}
+export default EventManager;

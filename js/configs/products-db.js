@@ -31,13 +31,13 @@ const products = {
     {
       idColor: '1',
       title: 'Black Pillow',
-      price: '$12',
+      price: '$15',
       img: './images/products/product-pillow-black.webp'
     },
     {
       idColor: '2',
       title: 'White Pillow',
-      price: '$15',
+      price: '$12',
       img: './images/products/product-pillow-white.webp'
     }
   ],
