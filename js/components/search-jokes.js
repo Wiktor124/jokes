@@ -32,5 +32,4 @@ function initSearchJokes() {
     e.target.reset();
   })
 }
-
 export default initSearchJokes;

@@ -1,6 +1,5 @@
-import { changeProductInfo } from '../events/details.js';
+import { changeProductInfo } from './details.js';
 import { fetchRandomJoke } from '../services/api.js';
-import randomJoke from '../components/random-joke.js';
 
 let getDefaultProductInfo = true;
 
@@ -18,10 +17,10 @@ async function defaultProductInfoOrNot() {
 }
 defaultProductInfoOrNot()
 
-function initJokeUpdater() {
+function initRandomJokeUpdater() {
   
   document.querySelector('.random-joke__btn').addEventListener('click', async (e) => {
-    const { joke } = await randomJoke(true)
+    const { joke } = await fetchRandomJoke()
     getDefaultProductInfo = false
     defaultProductInfoOrNot()
   
@@ -31,4 +30,4 @@ function initJokeUpdater() {
   })
 }
 
-export default initJokeUpdater;
+export default initRandomJokeUpdater;

@@ -13,10 +13,17 @@ function printRandomJoke(jokeId, joke) {
 }
 
 // get a random joke by clicking
-const randomJoke = async (returnThis =  false) => {
+async function randomJoke() {
   const { id, joke } = await fetchRandomJoke()
   printRandomJoke(id, joke);
 
   if(returnThis) return {id, joke}
 }
-export default randomJoke;
+
+function initRandomJokes() {
+  document.querySelector('.random-joke__btn').addEventListener('click', async (e) => {
+    await randomJoke()
+    e.target.innerText = 'Get another joke!';
+  })
+}
+export default initRandomJokes;

@@ -12,7 +12,7 @@ function printProduct({ detail: { product } }) {
   const productContainer = document.querySelector('.product__img');
   productContainer.style.color = Number(idColor) === 1 ? 'white' : '';
 
-   document.querySelector('#product__title').textContent = title
+  document.querySelector('#product__title').textContent = title
   document.querySelector('#product__price').textContent = price
   document.querySelector('.product__image').src = img;
 }
