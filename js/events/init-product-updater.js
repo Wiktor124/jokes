@@ -18,12 +18,14 @@ async function defaultProductInfoOrNot() {
 defaultProductInfoOrNot()
 
 function initRandomJokeUpdater() {
-  
+
   document.querySelector('.random-joke__btn').addEventListener('click', async (e) => {
     const { joke } = await fetchRandomJoke()
     getDefaultProductInfo = false
     defaultProductInfoOrNot()
-  
+
+    document.querySelector('.random-joke__text').textContent = joke
+
     // publish random joke
     changeProductInfo.fireEvent({ joke })
     e.target.innerText = 'Get another joke!';

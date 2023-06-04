@@ -37,9 +37,7 @@ function generateRadioButtons({ detail: { selectedProduct } }) {
 function printProductInfo({ detail: { joke } }) {
   document.querySelector('.product__joke-shirt').textContent = joke
 
-  document.querySelector('.product__joke-container').innerHTML = `
-    <p><strong>Joke:</strong> ${joke}</p>
-  `
+  document.querySelector('.product__joke-container').innerHTML = `<p><strong>Joke:</strong> ${joke}</p>`
 }
 
 // Subscribe events
