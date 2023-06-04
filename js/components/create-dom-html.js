@@ -1,4 +1,4 @@
-export class RandomForm extends HTMLElement{
+class RandomForm extends HTMLElement{
   connectedCallback() {
     this.innerHTML = `
       <section class="random-joke joke__container">

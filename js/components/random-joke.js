@@ -5,7 +5,7 @@ function printRandomJoke(jokeId, joke) {
   const query = new URLSearchParams(window.location.search).get('productId')
 
   if (query === null) {
-    textContainer.innerHTML = `<a href="product.html?productId=${jokeId}">${joke}</a>`
+    textContainer.innerHTML = `<a href="product.html?id=${jokeId}">${joke}</a>`
   } else {
     textContainer.innerHTML = `<span class="joke">${joke}</span>`
   }
