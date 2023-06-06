@@ -14,11 +14,14 @@ export class ShoppingCart {
     ShoppingCart.cart.splice(index, 1);
     
     localStorage.setItem('cart', JSON.stringify(ShoppingCart.cart));
+    ShoppingCart.printProducts();
   }
 
   removeAllProducts() {
     ShoppingCart.cart = [];
     localStorage.removeItem('cart');
+    
+    ShoppingCart.printProducts();
   }
 
   static printProducts() {
@@ -43,4 +46,3 @@ export class ShoppingCart {
     }).join('');
   }
 }
-ShoppingCart.printProducts();

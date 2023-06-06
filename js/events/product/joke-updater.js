@@ -8,7 +8,7 @@ async function defaultJokeOrNot() {
 
   if (getDefaultProductInfo) {
     const jokeId = new URLSearchParams(window.location.search).get('id')
-    const { id, joke } = await fetchRandomJoke(jokeId)
+    const { joke } = await fetchRandomJoke(jokeId)
 
     // publish default joke
     changeProductInfo.fireEvent({ joke })
