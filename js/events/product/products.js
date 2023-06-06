@@ -1,5 +1,6 @@
-import { changeProduct, changeProductColor, productsGenerator } from '../events/details.js';
-import products from '../configs/products-db.js';
+import { changeProduct, changeProductColor, productsGenerator } from './details.js';
+import { productData } from '../cart/detail.js';
+import products from '../../configs/products-db.js';
 
 const defaultProduct = products.shirts;
 const thisProduct = [{ dataId: 1, defaultProduct }];
@@ -18,7 +19,7 @@ const createProductButton = (index, productValue) => {
   return button;
 }
 
-function handleButtons  (button) {
+function handleButtons(button) {
   const { dataId } = thisProduct[0];
   thisProduct[0].dataId = Number(button.dataset.id);
   button.dataset.id = dataId;
@@ -28,6 +29,8 @@ function handleButtons  (button) {
 
   changeProduct.fireEvent({ selectedProduct });
   changeProductColor.fireEvent({ product: selectedProduct[0] });
+  productData.fireEvent({ product: selectedProduct[0] })
+
 }
 
 function initProducts() {
@@ -43,13 +46,16 @@ function initProducts() {
 
   // Publish default product info
   changeProduct.fireEvent({ selectedProduct });
-
+  productData.fireEvent({ product: selectedProduct[0] })
+  
   const idColor = document.querySelector('input[type="radio"]').dataset.color;
   changeProductColor.fireEvent({ product: selectedProduct[Number(idColor) - 1] });
 
   document.querySelector('#radio-container').addEventListener('change', (e) => {
     const productFound = selectedProduct.find(item => item.idColor === e.target.dataset.color);
     changeProductColor.fireEvent({ product: productFound });
+    productData.fireEvent({ product: productFound })
+
   });
 }
 export default initProducts;
