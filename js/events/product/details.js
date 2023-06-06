@@ -1,10 +1,9 @@
-import EventManager from "./observer.js";
+import EventManager from "../Observer.js";
 
 const changeProductColor = new EventManager('color.product');
 const changeProduct = new EventManager('product.change');
 const productsGenerator = new EventManager('products.generator');
 const changeProductInfo = new EventManager('product.information.change');
-
 
 function printProduct({ detail: { product } }) {
   const { idColor, img, title, price } = product;

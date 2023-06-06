@@ -1,8 +1,12 @@
-import "./components/create-dom-html.js";
+import "./components/Dom-nodes-html.js";
 import initRandomJokes from "./components/random-joke.js";
 import initSearchJokes from "./components/search-jokes.js";
+import initDashboard from './events/cart/dashboard.js'
+import initRemoveFromCart from "./events/cart/delete.js";
 
 window.onload = () => {
-  initRandomJokes()
-  initSearchJokes()
+  initRandomJokes();
+  initSearchJokes();
+  initDashboard();
+  initRemoveFromCart();
 }
