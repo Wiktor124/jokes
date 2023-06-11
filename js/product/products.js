@@ -1,6 +1,6 @@
 import { changeProduct, changeProductColor, productsGenerator } from './details.js';
 import { productData } from '../cart/detail.js';
-import products from '../../configs/products-db.js';
+import products from '../configs/products-db.js';
 
 const defaultProduct = products.shirts;
 const thisProduct = [{ dataId: 1, defaultProduct }];

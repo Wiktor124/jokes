@@ -2,8 +2,7 @@ export class ShoppingCart {
   static cart = JSON.parse(localStorage.getItem('cart')) || [];
 
   addProduct(data) {
-    const id = crypto.randomUUID()
-    const { idColor, img, joke, price, title } = data
+    const { id, idColor, img, joke, price, title } = data
 
     ShoppingCart.cart.push({ id, idColor, img, joke, price, title });
     localStorage.setItem('cart', JSON.stringify(ShoppingCart.cart));
@@ -25,14 +24,11 @@ export class ShoppingCart {
   }
 
   static printProducts() {
-    document.querySelector('#cart-list').innerHTML = ShoppingCart.cart.map(({ id, idColor, joke, title, price, img }) => {
-      
+    document.querySelector('#cart-list').innerHTML = ShoppingCart.cart.map(({ id, joke, title, price, img }) => {
       return `
         <li>
-          <div class="cart__img-product cart__color-text${idColor}">
-            <span class="cart__joke">${joke}</span>
-            <img src="./images/dad.jpeg" alt="Dad print" class="cart__dad-img" />
-            <img src="${img}" />
+          <div class="cart__img-product">
+            <img src="${img}" alt="${title}"/>
           </div>
 
           <div>

@@ -239,28 +239,5 @@ a {
   height: 233px;
   object-fit: contain;
 }
-.cart__joke {
-  position: absolute;
-  font-size: 0.6rem;
-  top: 50%;
-  left: 22%;
-  transform: translateY(-50%);
-  max-width: 20px;
-}
-.cart__dad-img {
-  position: absolute;
-  top: 50%;
-  right: 22%;
-  transform: translateY(-50%);
-  display: block;
-  width: fit-content;
-  height: 30px !important;
-}
-.cart__color-text1 {
-  color: #fff;
-}
-.cart__color-text2 {
-  color: #000000;
-}
 
 /*# sourceMappingURL=styles.css.map */
